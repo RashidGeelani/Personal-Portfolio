@@ -85,6 +85,9 @@ section{
     line-height: 1.3;
     
 }
+.home-content h1  span{
+    color: var(--text-color);
+}
 .home-content .text-animate {
     font-size: 3.2rem;
     font-weight: 700;
