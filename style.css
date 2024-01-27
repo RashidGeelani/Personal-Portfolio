@@ -41,8 +41,8 @@ body{
     z-index: 100;
     transition: .3s;
 }
-.header.sticky{
-    background-color: var(--bg-color);
+.header.sticky {
+    background: var(--bg-color);
 }
 
 .Logo{
@@ -618,4 +618,9 @@ flex: 1 1 40rem;
 .footer-iconTop a:hover i{
     color: var(--main-color);
 }
+
+
+
+
+ 
 
