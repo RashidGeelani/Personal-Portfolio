@@ -63,7 +63,7 @@ body{
 
 }
 #menu-icon{
-    /* display: none; */
+    display: none;
 }
 
 /* home section styling */
@@ -83,6 +83,7 @@ section{
 }
 .home-content{
     max-width: 60rem;
+    z-index: 99;
 }
 
 .home-content h1 {
@@ -200,7 +201,7 @@ color: #081b28;
     right: 0;
     width: 45%;
     height: 100%;
-    background: var(--bg-color);
+    background: none;
     transition: 3s;
     
 }
@@ -660,16 +661,102 @@ flex: 1 1 40rem;
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
+        width: 0%;
         padding: 1rem 4%;
-        background: var(--bg-color);
+        background: var(--main-color);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        transition: 0.25s ease;
+        transition-delay: 0.25s;
     }
+    .navBar .active{
+        left: 0;
+        transition-delay: 0s;
 
+    }.navBar .active-nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0;
+    }
+    .navBar .active .active-nav{
+        left: 100%;
+        transition-delay: 0;
+    }
     .navBar a{
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+    .navBar .active a{
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+    .home-img-hover{
+        pointer-events: none;
+        background: var(--bg-color);
+        opacity: .6;
+    }
+ }
+
+ @media (max-width: 520px) {
+    html{
+       font-size: 50%; 
+    }
+    .home-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .home-social{
+        width: 160px;
+    }
+    .home-social a{
+        width: 38px;
+        height: 38px;
+    }
+ }
+ @media (max-width: 462px){
+    .home-content h1{
+        font-size: 5.2rem;
+    }
+
+    .Education{
+      padding: 10rem 4% 5rem 5%;  
+    }
+
+    .contact form .input-box .input-feild{
+        width: 100%;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        margin-top: 2rem;
+        text-align: center;
+    }
+ }
+
+ @media (max-width: 371) {
+    .home{
+        justify-content: center;
+    }
+    .home-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-content h1{
+        font-size: 5rem;
     }
  }
 
